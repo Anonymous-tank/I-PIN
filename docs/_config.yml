@@ -1,0 +1,42 @@
+# I-PIN GitHub Pages Configuration
+title: "I-PIN: 基于声学传播增强的移动PIN认证"
+description: "创新的基于手指敲击声学特征的生物识别认证系统"
+url: "https://hanzoe.github.io"
+baseurl: "/I-PIN"
+
+# Theme settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Navigation
+navigation:
+  - title: "首页"
+    url: "/"
+  - title: "在线演示"
+    url: "/demo.html"
+  - title: "技术原理"
+    url: "/technology.html"
+  - title: "可视化展示"
+    url: "/visualizations.html"
+  - title: "结果画廊"
+    url: "/gallery.html"
+
+# SEO settings
+author: "I-PIN Research Team"
+keywords: "生物识别, 声学认证, PIN安全, 移动安全, 机器学习"
+
+# Social links
+github_repo: "https://github.com/hanzoe/I-PIN"
+paper_link: "#"
+# contact_email: "hanzoelong@gmail.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

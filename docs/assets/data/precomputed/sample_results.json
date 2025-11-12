@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "generated_at": "2024-01-01T00:00:00Z",
+    "description": "I-PIN 演示用预计算结果"
+  },
+  "tsne_results": {
+    "user_1": [
+      {"x": 120.5, "y": 85.2, "confidence": 0.95},
+      {"x": 118.3, "y": 87.1, "confidence": 0.92},
+      {"x": 122.1, "y": 83.9, "confidence": 0.97}
+    ],
+    "user_2": [
+      {"x": 200.1, "y": 150.3, "confidence": 0.89},
+      {"x": 198.7, "y": 152.1, "confidence": 0.91},
+      {"x": 201.5, "y": 148.8, "confidence": 0.93}
+    ],
+    "user_3": [
+      {"x": 80.2, "y": 220.1, "confidence": 0.88},
+      {"x": 82.1, "y": 218.9, "confidence": 0.90},
+      {"x": 79.3, "y": 221.7, "confidence": 0.87}
+    ]
+  },
+  "lesr_features": {
+    "sample_1": {
+      "energy_bands": [0.23, 0.45, 0.67, 0.89, 0.78, 0.56, 0.34, 0.12],
+      "snr_improvement": 8.3,
+      "noise_detected": false,
+      "replay_detected": false
+    },
+    "sample_2": {
+      "energy_bands": [0.12, 0.34, 0.56, 0.78, 0.89, 0.67, 0.45, 0.23],
+      "snr_improvement": 7.8,
+      "noise_detected": true,
+      "replay_detected": false
+    }
+  },
+  "performance_metrics": {
+    "clean_environment": {
+      "f1_score": 0.999,
+      "precision": 0.998,
+      "recall": 0.999,
+      "asr": 95.2,
+      "fpr": 2.1,
+      "eer": 0.001
+    },
+    "noisy_environment": {
+      "f1_score": 0.967,
+      "precision": 0.965,
+      "recall": 0.969,
+      "asr": 88.7,
+      "fpr": 8.9,
+      "eer": 0.029
+    },
+    "attack_scenario": {
+      "replay_detection_rate": 99.2,
+      "spoofing_prevention": 100.0,
+      "random_attack_success": 12.5
+    }
+  },
+  "feature_distributions": {
+    "panns_features": {
+      "dimensionality": 512,
+      "mean": 0.0,
+      "std": 1.0,
+      "sample_vector": [0.23, -0.45, 0.67, -0.12]
+    },
+    "lesr_features": {
+      "dimensionality": 16,
+      "frequency_bands": 32,
+      "swt_level": 8
+    }
+  },
+  "authentication_sessions": [
+    {
+      "user_id": "user_1",
+      "session_id": "session_001",
+      "attempts": 5,
+      "successful": 4,
+      "m_of_n_result": "PASS",
+      "confidence_scores": [0.89, 0.92, 0.34, 0.87, 0.91]
+    },
+    {
+      "user_id": "user_2", 
+      "session_id": "session_002",
+      "attempts": 5,
+      "successful": 3,
+      "m_of_n_result": "PASS",
+      "confidence_scores": [0.76, 0.88, 0.91, 0.42, 0.85]
+    }
+  ]
+}
